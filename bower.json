@@ -1,0 +1,10 @@
+{
+  "name": "angular-chartjs-directive",
+  "version": "0.0.1",
+  "main": "js/angular-chartjs-module.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
