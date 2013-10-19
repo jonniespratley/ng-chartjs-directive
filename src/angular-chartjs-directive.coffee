@@ -1,7 +1,7 @@
 #ChartJS Directive
 "use strict"
 
-angular.module('jps.angularChartjsDirective', []).directive "chartJs", ->
+angular.module('jonniespratley.angularChartjsDirective', []).directive "chartJs", ->
   scope:
     id: "@"
     title: "@"
