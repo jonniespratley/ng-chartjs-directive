@@ -4,7 +4,7 @@
 module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-coffee');
-
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	// Configurable paths
 	var yoConfig = {
 		livereload : 35729,
@@ -66,7 +66,9 @@ module.exports = function(grunt) {
 		},
 		connect : {
 			options : {
-				port : 9000,
+				keepalive: true,
+				port : 9001,
+				base : 'www',
 				hostname : '0.0.0.0' // Change this to '0.0.0.0' to access the server from outside.
 			},
 			livereload : {
@@ -162,6 +164,17 @@ module.exports = function(grunt) {
 			}
 		}
 
+	});
+
+	// After running "npm install connect --save-dev" to add connect as a dev
+	// dependency of your project, you can require it in your gruntfile with:
+	var connect = require('connect');
+
+	// Now you can define a "connect" task that starts a webserver, using the
+	// connect lib, with whatever options and configuration you need:
+	grunt.registerTask('server', 'Start a custom static web server.', function() {
+		grunt.log.writeln('Starting static web server in "www" on port 9001.');
+		connect(connect.static('www')).listen(9001);
 	});
 
 	grunt.registerTask('test', ['coffee:compile',
