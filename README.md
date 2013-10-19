@@ -7,8 +7,8 @@
 
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/jonniespratley/ng-chartjs-directive/master/dist/ng-ng-chartjs-directive.min.js
-[max]: https://raw.github.com/jonniespratley/ng-chartjs-directive/master/dist/ng-ng-chartjs-directive.js
+[min]: https://raw.github.com/jonniespratley/ng-chartjs-directive/master/dist/ng-chartjs-directive.min.js
+[max]: https://raw.github.com/jonniespratley/ng-chartjs-directive/master/dist/ng-chartjs-directive.js
 
 
 In your web page:
