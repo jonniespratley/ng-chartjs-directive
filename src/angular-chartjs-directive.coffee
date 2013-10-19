@@ -1,27 +1,27 @@
 #ChartJS Directive
-"use strict"
+'use strict'
 
-angular.module('jonniespratley.angularChartjsDirective', []).directive "chartJs", ->
+angular.module('jonniespratley.angularChartjsDirective', []).directive 'chartJs', ->
   scope:
-    id: "@"
-    title: "@"
-    type: "@"
-    width: "@"
-    height: "@"
-    options: "@"
-    data: "@"
-    ngModel: "="
-  restrict: "E"
+    id: '@'
+    title: '@'
+    type: '@'
+    width: '@'
+    height: '@'
+    options: '@'
+    data: '@'
+    ngModel: '='
+  restrict: 'E'
   replace: true
-  require: "?ngModel"
-  template: "<div class=\"chartjs\"><legend ng-show=\"{{title}}\">{{title}}</legend><div class=\"chartjs-wrap\"><canvas id=\"chart_{{id}}\" width=\"{{width}}\" height=\"{{height}}\">Content</canvas></div></div>"
+  require: '?ngModel'
+  template: '<div class="chartjs"><legend ng-show="{{title}}">{{title}}</legend><div class="chartjs-wrap"><canvas id="chart_{{id}}" width="{{width}}" height="{{height}}">Content</canvas></div></div>'
   link: (scope, element, attrs, ngModel) ->
     
     #Setup variables
     rtime = new Date(1, 1, 2000, 12, '00', '00')
     timeout = false
     delta = 100
-    id = "#chart_" + attrs.id
+    id = '#chart_' + attrs.id
     options = attrs.options
     type = attrs.type
     data = []
@@ -47,7 +47,7 @@ angular.module('jonniespratley.angularChartjsDirective', []).directive "chartJs"
     #Create the chart method actually does the creating of the chart.
     #createChart(id, type, data, options);
     createChart = (id, type, data, options) ->
-      ctx = angular.element(id).get(0).getContext("2d")
+      ctx = angular.element(id).get(0).getContext('2d')
       myNewChart = null
       defaults = angular.extend({}, options)
       wrapper = angular.element(id).parent()
@@ -59,17 +59,17 @@ angular.module('jonniespratley.angularChartjsDirective', []).directive "chartJs"
 
       #Switch based on type
       switch type
-        when "line"
+        when 'line'
           myNewChart = new Chart(ctx).Line(data, defaults)
-        when "bar"
+        when 'bar'
           myNewChart = new Chart(ctx).Bar(data, defaults)
-        when "doughnut"
+        when 'doughnut'
           myNewChart = new Chart(ctx).Doughnut(data, defaults)
-        when "pie"
+        when 'pie'
           myNewChart = new Chart(ctx).Pie(data, defaults)
-        when "polar"
+        when 'polar'
           myNewChart = new Chart(ctx).PolarArea(data, defaults)
-        when "radar"
+        when 'radar'
           myNewChart = new Chart(ctx).Radar(data, defaults)
         else
           myNewChart = new Chart(ctx).Line(data, defaults)
@@ -82,20 +82,20 @@ angular.module('jonniespratley.angularChartjsDirective', []).directive "chartJs"
       ), 500
     
     #Watch the model
-    scope.$watch "ngModel", (newVal, oldVal) ->
+    scope.$watch 'ngModel', (newVal, oldVal) ->
       ngModel.$setViewValue newVal
       data = ngModel.$viewValue
-      console.log "Model $viewValue:", ngModel, newVal, oldVal
+      console.log 'Model $viewValue:', ngModel, newVal, oldVal
       ngModel.$render = ->
         buildChart()
 
     #Watch the type attribute
-    attrs.$observe "type", (value) ->
+    attrs.$observe 'type', (value) ->
       type = String(value).toLowerCase()
       buildChart()
 
     #Watch the data attribute
-    attrs.$observe "data", (value) ->
+    attrs.$observe 'data', (value) ->
       data = angular.fromJson(value)
       buildChart()
 

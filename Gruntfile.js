@@ -9,7 +9,8 @@ module.exports = function(grunt) {
 	var yoConfig = {
 		livereload : 35729,
 		src : 'src',
-		dist : 'dist'
+		dist : 'dist',
+		test: 'test/spec'
 	};
 
 	// Livereload setup
@@ -155,13 +156,16 @@ module.exports = function(grunt) {
 		coffee : {
 			compile : {
 				files : {
-					'<%= yo.src %>/<%= pkg.name %>.js' : '<%= yo.src %>/<%= pkg.name %>.coffee'
+					'<%= yo.src %>/<%= pkg.name %>.js' : '<%= yo.src %>/<%= pkg.name %>.coffee',
+					'<%= yo.test %>/<%= pkg.name %>.js' : '<%= yo.test %>/<%= pkg.name %>.coffee'
 				}
 			}
 		}
 	});
 
-	grunt.registerTask('test', ['jshint', 'karma:unit']);
+	grunt.registerTask('test', ['coffee:compile', 
+	//'jshint', 
+	'karma:unit']);
 
 	grunt.registerTask('build', ['clean:dist', 'less:dist', 'ngmin:dist', 'coffee:compile', 'uglify:dist']);
 
