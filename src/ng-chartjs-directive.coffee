@@ -56,6 +56,7 @@ angular.module('jonniespratley.ngChartjsDirective', []).directive 'chartJs', ->
       scope.$apply ->
         scope.width = ctx.width = wrapper.width()
         scope.height = ctx.height = wrapper.height()
+        console.log(scope.height, scope.width);
 
       #Switch based on type
       switch type
