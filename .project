@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>ng-chartjs-directive</name>
+=======
+	<name>angular-chartjs-directive</name>
+>>>>>>> 3772ba6a08999d737d2d29fdeee681dfaaa49714
 	<comment></comment>
 	<projects>
 	</projects>

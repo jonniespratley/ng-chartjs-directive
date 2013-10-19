@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "ng-chartjs-directive",
   "version": "0.0.1",
   "description": "ng-chartjs-directive",
@@ -7,6 +8,16 @@
   ],
   "homepage": "https://github.com/jonniespratley/ng-chartjs-directive",
   "bugs": "https://github.com/jonniespratley/ng-chartjs-directive/issues",
+=======
+  "name": "angular-chartjs-directive",
+  "version": "0.0.1",
+  "description": "angular-chartjs-directive",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "https://github.com/jonniespratley/angular-chartjs-directive",
+  "bugs": "https://github.com/jonniespratley/angular-chartjs-directive/issues",
+>>>>>>> 3772ba6a08999d737d2d29fdeee681dfaaa49714
   "author": {
     "name": "Jonnie Spratley",
     "email": "jonniespratley@me.com",
@@ -14,7 +25,11 @@
   },
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "https://github.com/jonniespratley/ng-chartjs-directive.git"
+=======
+    "url": "https://github.com/jonniespratley/angular-chartjs-directive.git"
+>>>>>>> 3772ba6a08999d737d2d29fdeee681dfaaa49714
   },
   "licenses": [
     {

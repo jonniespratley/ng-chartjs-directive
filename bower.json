@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "ng-chartjs-directive",
+=======
+  "name": "angular-chartjs-directive",
+>>>>>>> 3772ba6a08999d737d2d29fdeee681dfaaa49714
   "version": "0.0.1",
   "dependencies": {
   },
