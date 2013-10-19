@@ -1,10 +1,11 @@
 {
   "name": "angular-chartjs-directive",
   "version": "0.0.1",
-  "main": "js/angular-chartjs-module.js",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "components"
-  ]
+  "dependencies": {
+  },
+  "devDependencies": {
+    "angular-unstable": "latest",
+    "angular-mocks": "latest",
+    "jquery": "latest"
+  }
 }
