@@ -1,4 +1,3 @@
-
 # ng-chartjs-directive
 This is a AngularJS directive for using the ChartJS library.
 
@@ -22,10 +21,10 @@ In your web page:
 	
 	
 #### 2. Add Dependency
-In your app.js file or wherever you have declared your applications module add `jonniespratley.ngChartjsDirective` to your dependencies.
+In your app.js file or wherever you have declared your applications module add `chartjs.directive` to your dependencies.
 
 	var app = angular.module('app', [
-		'jonniespratley.ngChartjsDirective'
+		'chartjs.directive'
 	]);
 
 #### 4. Add Markup
